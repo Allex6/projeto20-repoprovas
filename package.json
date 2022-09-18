@@ -39,7 +39,7 @@
     "test": "dotenv -e .env.test prisma migrate dev && dotenv -e .env.test jest --no-cache --detectOpenHandles",
     "dev": "nodemon ./lib/server.ts",
     "build": "tsc",
-    "start": "prisma migrate deploy && ts-node ./lib/server.ts"
+    "start": "prisma migrate deploy && node ./dist/lib/server.js"
   },
   "prisma": {
     "seed": "ts-node ./prisma/seed.ts"
